@@ -50,3 +50,5 @@ user: <customerId>
 password: password
 
 Basic <Base64 encoded<username:password>> needs to be passed as Authorization Header for calling loan APIs.
+
+#### Feature tests are present in /src/test/java/com/example/demo/features
