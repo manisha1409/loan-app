@@ -1,0 +1,375 @@
+{
+	"info": {
+		"_postman_id": "f76aee89-a38c-4400-ac32-7759c75fadf0",
+		"name": "Loan Application",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29776695"
+	},
+	"item": [
+		{
+			"name": "Customer APIs",
+			"item": [
+				{
+					"name": "Delete customer by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/v1/customers/6",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"v1",
+								"customers",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create customer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Manisha\",\r\n    \"lastName\": \"Raj\",\r\n    \"email\": \"mr@gmail.com\",\r\n    \"creditScore\": 725,\r\n    \"employmentStatus\": \"FULL_TIME\",\r\n    \"existingLoans\": 0,\r\n    \"address\": \"India\"  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/v1/customers",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"v1",
+								"customers"
+							],
+							"query": [
+								{
+									"key": "requestDate",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get customer by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/v1/customers/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"v1",
+								"customers",
+								"1"
+							],
+							"query": [
+								{
+									"key": "requestDate",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get customer password by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \r\n    \"firstName\" : \"Silpa\",\r\n     \"lastName\" : \"Raj\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/v1/customers/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"v1",
+								"customers",
+								"1"
+							],
+							"query": [
+								{
+									"key": "requestDate",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All customers",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \r\n    \"firstName\" : \"Silpa\",\r\n     \"lastName\" : \"Raj\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/v1/customers",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"v1",
+								"customers"
+							],
+							"query": [
+								{
+									"key": "requestDate",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update customer By Id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \r\n    \"firstName\" : \"John\",\r\n    \"lastName\" : \"Doe\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/v1/customers/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"v1",
+								"customers",
+								"1"
+							],
+							"query": [
+								{
+									"key": "requestDate",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Loan APIs",
+			"item": [
+				{
+					"name": "Get loansDetails  By CustomerId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic MTpwYXNzd29yZA==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \r\n    \"firstName\" : \"Silpa\",\r\n     \"lastName\" : \"Raj\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/v1/loans/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"v1",
+								"loans",
+								"1"
+							],
+							"query": [
+								{
+									"key": "customerId",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create loan  for customer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic MTpwYXNzd29yZA==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \r\n    \"firstName\" : \"Silpa\",\r\n     \"lastName\" : \"Raj\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/v1/loans/2?amount=100&term=3&loanType=HOME",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"v1",
+								"loans",
+								"2"
+							],
+							"query": [
+								{
+									"key": "amount",
+									"value": "100"
+								},
+								{
+									"key": "term",
+									"value": "3"
+								},
+								{
+									"key": "loanType",
+									"value": "HOME"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Approve loan by Id",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic MTpwYXNzd29yZA==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \r\n    \"firstName\" : \"Silpa\",\r\n     \"lastName\" : \"Raj\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/v1/loans/approve/29",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"v1",
+								"loans",
+								"approve",
+								"29"
+							],
+							"query": [
+								{
+									"key": "customerId",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pay loan By Id",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Basic MTpwYXNzd29yZA==",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}/v1/loans/repayments/10?repaymentAmount=10",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"v1",
+								"loans",
+								"repayments",
+								"10"
+							],
+							"query": [
+								{
+									"key": "repaymentAmount",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
