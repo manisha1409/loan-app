@@ -14,7 +14,7 @@
 
 ## Project Description 
 
-Project is divided into 3 main parts :
+Project is divided into 2 main parts :
 
 ### Customer Service
 This part contains the logic to create, update, delete, and fetch customers. It also includes a utility API for testing, which provides base64 encoded customerId:password. This encoded string is used while calling loan-related APIs.
